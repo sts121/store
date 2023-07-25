@@ -1,0 +1,49 @@
+<header class="sticky">
+    <div class="logo-container">
+        <img src="../../../assets/logo1.png" height="50">
+    </div>
+    <nav>
+        <button (click)="viewTab('home')" class="icon-button">
+            <div class="i-wrapper">
+                <i class="pi pi-fw pi-home"></i>
+            </div>
+            <span>Home</span>
+        </button>
+        <button (click)="viewTab('shop')" class="icon-button">
+            <div class="i-wrapper">
+                <i class="pi pi-fw pi-shopping-bag"></i>
+            </div>
+            <span>Shop</span>
+        </button>
+        <div class="right-nav">
+            <app-dark-mode-toggle></app-dark-mode-toggle>
+            <button pButton label="Logout" icon="pi pi-power-off"></button>
+        </div>
+        <ul>
+        </ul>
+    </nav>
+</header>
+<!-- <p-menubar [model]="items">
+    <ng-template pTemplate="start">
+        <img src="../../../assets/logo1.png" height="50" class="m-4 pl-10">
+        <button (click)="viewTab('home')">
+            <div class="i-wrapper">
+                <i class="pi pi-fw pi-home"></i>
+            </div>
+            <span>Home</span>
+        </button>
+        <button (click)="viewTab('shop')">
+            <div class="i-wrapper">
+                <i class="pi pi-fw pi-shopping-bag"></i>
+            </div>
+            <span>Shop</span>
+        </button>
+    </ng-template>
+    <app-dark-mode-toggle></app-dark-mode-toggle>
+    <button pButton label="Logout" icon="pi pi-power-off"></button>
+</p-menubar> -->
+
+<div class="card-container">
+    <!-- <app-home *ngIf="tabView=='home'"></app-home>-->
+    <app-shop *ngIf="tabView=='shop'"></app-shop>
+</div>
